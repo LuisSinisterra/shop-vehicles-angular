@@ -1,0 +1,33 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Model</th>
+                      <th scope="col">Price</th>
+                      <th>Detail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let car of carsList">
+                      <th scope="row"> {{ car.id }}</th>
+                      <td>{{ car.name }}</td>
+                      <td>{{car.model}}</td>
+                      <td>{{ car.price | currency }}</td>
+                      <td><button class="btn btn-outline-primary" [routerLink]="['/cars', car.id]">Look</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
+
+
+
+
